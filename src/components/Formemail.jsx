@@ -17,16 +17,16 @@ function Formemail() {
     try {
       await SendEmail(FormData);
       //   return console.log(SendEmail);
+      console.log(SendEmail);
       if (SendEmail === 200) {
-        alert("success");
+        console.log("sukses");
+        e.target.reset();
       } else {
         return console.log("gagal");
       }
     } catch (error) {
       console.log(error);
     }
-
-    e.target.reset();
   };
   return (
     <form
