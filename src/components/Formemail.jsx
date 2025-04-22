@@ -9,7 +9,7 @@ function Formemail() {
     title: "",
     message: "",
   });
-  console.log(import.meta.env);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(FormData);
