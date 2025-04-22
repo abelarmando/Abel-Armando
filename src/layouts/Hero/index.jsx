@@ -24,6 +24,7 @@ function Hero() {
             />
           </h1>
           <p className="lg:text-4xl text-xl">
+            {process.env.VITE_SERVICE_ID}
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
             vitae a sunt at nobis alias corrupti explicabo. Officia tempore
             possimus vero atque, cum maiores inventore, tempora, beatae minima
