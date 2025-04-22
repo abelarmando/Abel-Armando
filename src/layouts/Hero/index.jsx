@@ -2,7 +2,7 @@ import { TypeAnimation } from "react-type-animation";
 import Button from "../../components/Button";
 function Hero() {
   return (
-    <section className="relative  px-8 xl:px-[180px] min-h-dvh lg:flex items-center">
+    <section className="relative  px-8 xl:px-[180px] min-h-dvh md:flex items-center">
       <div className="absolute top-0 right-0 ">
         <img src="./images/bg.png" alt="" />
       </div>
