@@ -15,10 +15,9 @@ function Formemail() {
     console.log(FormData);
 
     try {
-      await SendEmail(FormData);
-      //   return console.log(SendEmail);
-      console.log(SendEmail);
-      if (SendEmail === 200) {
+      const response = await SendEmail(FormData);
+
+      if (response === 200) {
         console.log("sukses");
         e.target.reset();
       } else {

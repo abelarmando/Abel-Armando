@@ -7,7 +7,7 @@ export const SendEmail = async (templateParams) => {
       templateParams,
       import.meta.env.VITE_PUBLIC_KEY
     );
-    return send.status;
+    return 200;
   } catch (error) {
     console.log(error);
   }
