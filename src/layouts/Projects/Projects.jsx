@@ -13,6 +13,7 @@ function Projects() {
             title={project.name}
             github={project.github}
             live={project.live}
+            technologies={project.technologies}
           />
         ))}
       </div>

@@ -1,4 +1,5 @@
 import AboutMe from "./layouts/AboutMe";
+import Contact from "./layouts/Contact";
 import Hero from "./layouts/Hero";
 import Projects from "./layouts/Projects/Projects";
 import Technologies from "./layouts/Technologies";
@@ -10,6 +11,7 @@ function App() {
       <AboutMe />
       <Technologies />
       <Projects />
+      <Contact />
     </div>
   );
 }
