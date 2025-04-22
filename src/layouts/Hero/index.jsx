@@ -1,6 +1,7 @@
 import { TypeAnimation } from "react-type-animation";
 import Button from "../../components/Button";
 function Hero() {
+  console.log(process.env);
   return (
     <section className="relative  px-8 xl:px-[180px] min-h-dvh md:flex items-center">
       <div className="absolute top-0 right-0 ">
@@ -24,7 +25,6 @@ function Hero() {
             />
           </h1>
           <p className="lg:text-4xl text-xl">
-            {process.env.VITE_SERVICE_ID}
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
             vitae a sunt at nobis alias corrupti explicabo. Officia tempore
             possimus vero atque, cum maiores inventore, tempora, beatae minima
