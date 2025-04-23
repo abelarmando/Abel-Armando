@@ -4,9 +4,9 @@ import { MyProjects } from "../../Constants";
 
 function Projects() {
   return (
-    <div className="space-y-10">
+    <div className="space-y-10 px-8 xl:px-[180px]">
       <h1 className="lg:text-6xl text-4xl text-center">My Projects</h1>
-      <div className="flex gap-10 justify-center">
+      <div className="flex gap-10 justify-center flex-wrap w-full">
         {MyProjects.map((project) => (
           <CardProject
             img={project.img}

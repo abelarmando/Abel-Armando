@@ -1,8 +1,14 @@
 import React from "react";
 import { useState } from "react";
 import { SendEmail } from "../util/SenderEmail";
-
+import Notif from "./Notif";
+import { FaCheckCircle } from "react-icons/fa";
+import { IoMdAlert } from "react-icons/io";
+import { Flex, Spin } from "antd";
 function Formemail() {
+  const [IsLoading, setIsLoading] = useState(false);
+  const [showNotifSuccess, setSetshowNotifSuccess] = useState(false);
+  const [showNotifFailed, setSetshowNotifFailed] = useState(false);
   const [FormData, setFormData] = useState({
     name: "",
     email: "",
@@ -12,26 +18,58 @@ function Formemail() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(FormData);
 
     try {
+      setIsLoading(true);
+
       const response = await SendEmail(FormData);
 
       if (response === 200) {
-        console.log("sukses");
-        e.target.reset();
+        setSetshowNotifSuccess(true);
+        setTimeout(() => {
+          setSetshowNotifSuccess(false);
+        }, 3000);
       } else {
-        return console.log("gagal");
+        setSetshowNotifFailed(true);
+        setTimeout(() => {
+          setSetshowNotifFailed(false);
+        }, 3000);
       }
     } catch (error) {
       console.log(error);
+    } finally {
+      setIsLoading(false);
     }
+
+    setFormData({
+      name: "",
+      email: "",
+      title: "",
+      message: "",
+    });
   };
   return (
     <form
       onSubmit={(e) => handleSubmit(e)}
       className="flex flex-col gap-4  h-full justify-center"
     >
+      {IsLoading && (
+        <Notif text="Sending Email..." bg="bg-black/50">
+          <Flex align="center" gap="middle">
+            <Spin />
+          </Flex>
+        </Notif>
+      )}
+      {showNotifSuccess && (
+        <Notif text="Email Sent" bg="bg-green-500/80">
+          <FaCheckCircle className="text-2xl text-green-500" />
+        </Notif>
+      )}
+      {showNotifFailed && (
+        <Notif text="Error" bg="bg-red-500/80">
+          <IoMdAlert className="text-2xl text-red-500" />
+        </Notif>
+      )}
       <input
         type="text"
         placeholder="Name..."
@@ -67,7 +105,10 @@ function Formemail() {
         onChange={(e) => setFormData({ ...FormData, message: e.target.value })}
         required
       />
-      <button type="submit" className="bg-blue-400 rounded-2xl w-full h-10">
+      <button
+        type="submit"
+        className="bg-blue-400 rounded-2xl w-full h-10 cursor-pointer"
+      >
         Send
       </button>
     </form>

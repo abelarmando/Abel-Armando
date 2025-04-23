@@ -24,10 +24,10 @@ function Hero() {
             />
           </h1>
           <p className="lg:text-4xl text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-            vitae a sunt at nobis alias corrupti explicabo. Officia tempore
-            possimus vero atque, cum maiores inventore, tempora, beatae minima
-            accusamus dignissimos?
+            I am a web developer who enjoys creating impactful digital
+            solutions. In this portfolio, you can see the results of my hard
+            work from interactive frontend to solid backend. Let's explore my
+            work!
           </p>
           <div className="md:flex gap-10 space-y-4 ">
             <Button
@@ -43,7 +43,7 @@ function Hero() {
           </div>
         </div>
 
-        <div className="z-10 w-full xl:w-1/4 max-xl:flex justify-center">
+        <div className="z-10 w-full xl:w-1/4 flex justify-end">
           <img src="./images/profile.png" alt="" width={400} height={400} />
         </div>
       </div>
