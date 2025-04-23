@@ -5,6 +5,7 @@ import Hero from "./layouts/Hero";
 import Navbar from "./layouts/Navbar/Navbar";
 import Projects from "./layouts/Projects/Projects";
 import Technologies from "./layouts/Technologies";
+import { Flex, Spin } from "antd";
 
 function App() {
   return (

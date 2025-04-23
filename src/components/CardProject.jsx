@@ -29,6 +29,18 @@ function CardProject({ img, title, github, live, technologies }) {
             </div>
           ))}
         </div>
+        <div className="flex gap-2">
+          <FaCode
+            className=" text-5xl text-[#adb7be] border-white border-2 rounded-full p-2 block md:hidden"
+            onClick={() => window.open(github, "_blank")}
+          />
+          {live && (
+            <FaEye
+              className=" text-5xl text-[#adb7be] border-white border-2 rounded-full p-2 block md:hidden"
+              onClick={() => window.open(live, "_blank")}
+            />
+          )}
+        </div>
       </div>
     </div>
   );
