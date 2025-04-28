@@ -1,6 +1,6 @@
-function Button({ text, className, img }) {
+function Button({ text, className, img, link }) {
   return (
-    <a className={`${className ?? ""} cta-button group w-[100px]`}>
+    <a href={link} className={`${className ?? ""} cta-button group w-[100px]`}>
       <div className="bg-circle" />
       <p className="text ">{text}</p>
       <div className="arrow-wrapper">
