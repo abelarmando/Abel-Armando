@@ -16,11 +16,6 @@ function App() {
       <Technologies />
       <Projects />
       <Contact />
-      <Notif text="Sending Email..." bg="bg-black/50">
-        <Flex align="center" gap="middle">
-          <Spin />
-        </Flex>
-      </Notif>
     </div>
   );
 }
