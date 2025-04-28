@@ -40,7 +40,7 @@ function Hero() {
               text="Download CV"
               className="md:w-80 md:h-16 w-full h-12"
               img="./images/paperplane.svg"
-              link="https://drive.usercontent.google.com/u/0/uc?id=1NPkl2_4M2TajBXqpa_kYLm7K2AdQp1eC&export=download"
+              link="https://drive.usercontent.google.com/u/0/uc?id=12UUHLqbFr-ZsAzPPd89JmeMNVBoQO0n8&export=download"
             />
           </div>
         </div>
